@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: adijaiswal/backend:694535bf15cb7328bd153687abca4167a3fd083a
+          image: us-central1-docker.pkg.dev/project-eb2d0d17-6cbd-42e3-970/argo-cd/backend:694535bf15cb7328bd153687abca4167a3fd083a
           ports:
             - containerPort: 5000
           env:
@@ -35,17 +35,4 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: mysql-config
-                  key: MYSQL_DATABASE
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backend-svc
-  namespace: prod
-spec:
-  selector:
-    app: backend
-  ports:
-    - port: 5000
-      targetPort: 5000
-  type: ClusterIP
+                  key:
