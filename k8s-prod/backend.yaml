@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: us-central1-docker.pkg.dev/project-eb2d0d17-6cbd-42e3-970/argo-cd/backend:694535bf15cb7328bd153687abca4167a3fd083a
+          image: us-central1-docker.pkg.dev/project-eb2d0d17-6cbd-42e3-970/argo-cd/backend:20a7b83a2443691b3efd950fa85d92f0fd9c217f
           ports:
             - containerPort: 5000
           env:
